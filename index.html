@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draude's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+</head>
+
+<script>
+    window.onscroll = function () {
+        var button = document.getElementById("back-to-top");
+        // Show the button only if the screen width is greater than 1000px and the user has scrolled down.
+        if (window.innerWidth > 1000 && (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)) {
+            button.style.display = "block"; // Show button
+        } else {
+            button.style.display = "none";  // Hide button
+        }
+    };
+    
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+
+      // Slide show
+      document.addEventListener("DOMContentLoaded", function () {
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('r' + counter).checked = true;
+            counter = (counter % 4) + 1;
+        }, 3000);
+    });
+
+    // Toggle sidebar
+    function show() {
+        document.getElementById('sidebar').classList.toggle('active');
+        document.getElementById('treelines').classList.toggle('activebtn');
+    }
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function (event) {
+        var sidebar = document.getElementById('sidebar');
+        var treelines = document.getElementById('treelines');
+        var targetElement = event.target;
+
+        if (!sidebar.contains(targetElement) && !treelines.contains(targetElement)) {
+            sidebar.classList.remove('active');
+            treelines.classList.remove('activebtn');
+        }
+    });
+</script>
+
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div id="treelines" onclick="show()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#about me">About Me</a></li>
+                <li><a href="#my family">My Family</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reason">Why I Chose BSIT</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <header>
+        <h1>Welcome to my Portfolio!</h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="#about me">About Me</a></li>
+                <li><a href="#my family">My Family</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reason">Why I Chose BSIT</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="about me">
+        <section class="about-section">
+            <h2>Who Am I?</h2>
+            <div class="about-container">
+                <div class="profile-image">
+                    <img src="images\photo_6319014194254560158_y.jpg" alt="Me">
+                </div>
+                <div class="about-content">
+                    <p>Hello! I am Eduard Abraham Z. Orcullo, Born in December 05, 2003. Living in this world for 21 years and currently studying Bachelor of Science in Information Technology at Camarines Norte State College.</p>
+                    <p>Currently in my 2nd year on the program I took and hoping that I will pass and graduate.</p>
+                    <p>Welcome yourself to furthermore know about myself throughout the page!</p>
+                </div>
+            </div>
+        </section>
+        <br>
+    </main>
+
+    <main id="my family">
+        <h2>My family!</h2>
+        <section class="family-section">
+            <!-- Family Member 1 -->
+            <div class="family-member">
+                <img src="images\358063508_10160925782463279_7907119351129059673_n.jpg" alt="Father">
+                <h3>Tama Raika</h3>
+                <p>My step-father. A loving and hard-working person, he took the role of being a father to us when my biological father and my mother annuled.</p>
+            </div>
+
+            <!-- Family Member 2 -->
+            <div class="family-member">
+                <img src="images\357713315_10160925782098279_6200397057128945831_n.jpg" alt="Mother">
+                <h3>Sally Z. Raika</h3>
+                <p>My mother. A strict and loving mom. Always there to support us and provide our needs. </p>
+            </div>
+
+            <!-- Family Member 3 -->
+            <div class="family-member">
+                <img src="images/Screenshot 2024-12-14 231454.png" alt="Brother">
+                <h3>Elijah Mae Z. Orcullo</h3>
+                <p>My elder sister. Responsible and take care of us always. Currently working overseas and supports us in our daily needs.</p>
+            </div>
+
+            <!-- Family Member 4 -->
+            <div class="family-member">
+                <img src="images\Screenshot 2024-12-14 230935.png" alt="Brother">
+                <h3>Eva Filomena Z. Orcullo</h3>
+                <p>My younger sister. she is also the youngest in the family. Jolly, talkative, and friendly, but mostly annoying.</p>
+            </div>
+
+            <!-- Add more family members as needed -->
+        </section>
+        <br>
+    </main>
+
+    <main id="hobbies">
+        <h2>My Hobbies</h2>
+        <p>Here are some few things I like to do</p>
+
+        <section class="hobbies-grid">
+            <div class="hobby-item">
+                <div class="hobby-card">
+                    <div class="front">
+                        <img src="images\Screenshot 2024-12-15 220650.png" alt="Hobby 1">
+                        <h3>Traveling</h3>
+                        <p>Since i was a child, i travel a lot back and forth to manila.</p>
+                    </div>
+                    <div class="back">
+                        <p>Until i grew up, it become a hobby of mine. Traveling and exploring various places gives me peace and comfort.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-card">
+                    <div class="front">
+                        <img src="images\Screenshot 2024-12-15 221552.png" alt="Hobby 2">
+                        <h3>Reading</h3>
+                        <p>Reading is one of the hobby i developed during the pandemic.</p>
+                    </div>
+                    <div class="back">
+                        <p>It all started in physical books, then moved to digital and then there's the manga, manhwa, and light novel. Up until now, Reading is one of my relaxation. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-card">
+                    <div class="front">
+                        <img src="images\Screenshot 2024-12-15 222850.png" alt="Hobby 3">
+                        <h3>Anime</h3>
+                        <p>Getting hooked in anime and making it a hobby started wayback 2014.</p>
+                    </div>
+                    <div class="back">
+                        <p>My elder sister introduced me this cartoon like show but i got smack at the back of my head because it was anime. the first time i watched that anime got me really hooked in anime up until now. The anime she showed me was Attack on Titan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-card">
+                    <div class="front">
+                        <img src="images\Screenshot (76).png" alt="Hobby 4">
+                        <h3>Gaming</h3>
+                        <p>Gaming was one of my escape. It gives me the peace and chaos at the same time. However, gaming also boost my productivity sometimes and provide socialization with random people and with my friends as well.</p>
+                    </div>
+                    <div class="back">
+                        <p>Gaming can be addictive but it can be managed by setting up time for it. </p>
+                    </div>
+                </div>
+            </div>
+        <br>
+    </main>
+
+    <main id="gallery">
+        <section class="gallery-section">
+            <h2>A peek in my gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images\photo_6321068760580079384_y.jpg" alt="gooofy side with my woman">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\photo_6274074065945869942_y.jpg" alt="Bowling and winning">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\photo_6152303775939933819_y.jpg" alt="at your service">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Screenshot 2024-12-15 223907.png" alt="waiting at the airport">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Screenshot 2024-12-15 224133.png" alt="dinner with family(incomplete though)">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Screenshot 2024-12-15 224355.png" alt="random mirror picture">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Screenshot 2024-12-15 224556.png" alt="coffee time">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Screenshot 2024-12-15 224811.png" alt="3 high idiots">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Screenshot 2024-12-15 224942.png" alt="volleyball kahit 8080">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Screenshot 2024-12-15 225437.png" alt="with nature ig??">
+                </div>
+                <div class="gallery-item">
+                    <img src="images\Screenshot 2024-12-15 225641.png" alt="just chillin">
+                </div>
+                
+            </div>
+        </section>
+        <br>
+    </main>
+
+    <main id="reason">
+        <section class="center-content">
+            <h2>Why did I choose BSIT?</h2>
+            <p>Choosing this course was unexpected. I was planning on applying for engineering but sadly, i didn't meet the minimum GWA.</p>
+
+            <p>I still took the entrance exam and passed the BSIT program. Since then, I started to like BSIT and somewhat doubting if I took the right path.</p>
+
+            <p>This course was full of ups and downs, but also happiness and enjoyment. My family and friends supports me in this course especially the woman I love. Thanks to them, I'm still surving and will survive in this program I took.</p>
+        </section>
+        <br>
+    </main>
+
+    <main id="contact">
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-list">
+                <a href="https://www.facebook.com/eduard.zantua.3" target="_blank" class="contact-item">
+                    <img src="images\facebook-logo-square-shape.png" alt="Facebook Icon" class="contact-icon">
+                    <p><strong>Facebook:</strong> Eduard Zantua</p>
+                </a>
+                <a href="https://www.instagram.com/drd.z.21/" target="_blank" class="contact-item">
+                    <img src="images\1715965947instagram-logo-png (1).png" alt="Instagram Icon" class="contact-icon">
+                    <p><strong>Instagram:</strong> drd.z.21</p>
+                </a>
+                <a href="https://x.com/ed_znt_21" target="_blank" class="contact-item">
+                    <img src="images\1725374683twitter-x-logo.png" alt="X icon" class="contact-icon">
+                    <p><strong>X(twitter):</strong> @ed_znt_21</p>
+                </a>
+            </div>
+        </section>             
+        <br>
+    </main>
+    <button id="back-to-top" onclick="scrollToTop()">
+        <img src="images\pngtree-blue-upward-arrow-number-free-map-image_1288675.jpg" alt="Back to Top" id="back-to-top-img">
+    </button>
+    
+
+</body>
+</html>
